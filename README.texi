@@ -1,0 +1,53 @@
+\input texinfo
+@setfilename man
+@settitle C8_3DViewer_v1.0-0 
+
+@copying
+Copyright @copyright{} school 21
+@end copying
+
+@titlepage
+@title C8_3DViewer_v1.0-0 
+@author dzharaq matins
+@page
+@vskip 0pt plus 2filll
+@insertcopying
+@end titlepage
+
+
+@ifnottex
+@paragraphindent 0
+@end ifnottex
+@titlepage
+@title
+@end titlepage
+
+@node Top
+@top 3DViewer_v1.0-0
+Info
+This program was created by students of School 21 in Novosibirsk (nicknames - dzharaq and matins)
+
+Program features
+This is the simple 3D viewer, which opens obj files and reads only vertices and faces
+
+On the OPEN FILE button you can download the file you are interested in .obj
+
+The program provide the ability to:
+
+Load a wireframe model from an obj file (vertices and surfaces list support only).
+Translate the model by a given distance in relation to the X, Y, Z axes.
+Rotate the model by a given angle relative to its X, Y, Z axes.
+Scale the model by a given value.
+
+The program  allow customizing the type of projection (parallel and central)
+The program allow setting up the type (solid, dashed), color and thickness of the edges, display method (none, circle, square), color and size of the vertices
+The program allow choosing the background color
+Settings must be saved between program restarts
+
+The program allow saving the captured (rendered) images as bmp and jpeg files.
+The program allow recording small screencasts by a special button - the current custom affine transformation of the loaded object into gif-animation
+
+Use our program with pleasure!
+
+
+@bye

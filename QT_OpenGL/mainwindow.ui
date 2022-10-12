@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>1000</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>941</width>
+    <height>695</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>827</width>
+     <height>0</height>
+    </size>
+   </property>
+   <widget class="Widget" name="openGLWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>499</x>
+      <y>0</y>
+      <width>702</width>
+      <height>1001</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="FileName">
+    <property name="geometry">
+     <rect>
+      <x>33</x>
+      <y>60</y>
+      <width>433</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vertexes">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>929</y>
+      <width>177</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #B5B8B1;
+}</string>
+    </property>
+    <property name="text">
+     <string>Vertices</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="facets">
+    <property name="geometry">
+     <rect>
+      <x>13</x>
+      <y>960</y>
+      <width>177</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #B5B8B1;
+}</string>
+    </property>
+    <property name="text">
+     <string>Edges</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="newFile">
+    <property name="geometry">
+     <rect>
+      <x>203</x>
+      <y>90</y>
+      <width>93</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+    </property>
+    <property name="text">
+     <string>OPEN FILE</string>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>201</y>
+      <width>499</width>
+      <height>683</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTabWidget::pane {
+  border: 1px solid rgba(0,0,0,0);
+  top:-1px; 
+  background: transparent;
+}
+
+QTabBar::tab {
+  color: white;
+  background: #454545; 
+  border-radius: 10px;
+  padding: 6px;
+  height: 16px;
+  width: 180px;
+}
+
+QTabBar::tab:selected { 
+  background: #686868; 
+  margin-bottom: -1px; 
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="main">
+     <attribute name="title">
+      <string>MAIN SETTINGS</string>
+     </attribute>
+     <widget class="QLabel" name="position">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>88</y>
+        <width>59</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>POSITION</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="x_rot">
+      <property name="geometry">
+       <rect>
+        <x>149</x>
+        <y>270</y>
+        <width>66</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="prefix">
+       <string notr="true"/>
+      </property>
+      <property name="suffix">
+       <string notr="true"/>
+      </property>
+      <property name="decimals">
+       <number>0</number>
+      </property>
+      <property name="minimum">
+       <double>-100000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="leftX">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>120</y>
+        <width>53</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>←</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="scaleButton">
+      <property name="geometry">
+       <rect>
+        <x>256</x>
+        <y>370</y>
+        <width>58</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>18</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>+</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="y_rot">
+      <property name="geometry">
+       <rect>
+        <x>219</x>
+        <y>270</y>
+        <width>66</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="decimals">
+       <number>0</number>
+      </property>
+      <property name="minimum">
+       <double>-100000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="z_rot">
+      <property name="geometry">
+       <rect>
+        <x>289</x>
+        <y>270</y>
+        <width>66</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="decimals">
+       <number>0</number>
+      </property>
+      <property name="minimum">
+       <double>-100000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="rotation">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>234</y>
+        <width>62</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ROTATION</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="scale">
+      <property name="geometry">
+       <rect>
+        <x>232</x>
+        <y>340</y>
+        <width>43</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>SCALE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="downY">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>160</y>
+        <width>53</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>↓</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="topY">
+      <property name="geometry">
+       <rect>
+        <x>221</x>
+        <y>120</y>
+        <width>53</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>↑</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="zTop">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>160</y>
+        <width>53</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>↙</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="rightX">
+      <property name="geometry">
+       <rect>
+        <x>281</x>
+        <y>160</y>
+        <width>53</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>→</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="negScaleButton">
+      <property name="geometry">
+       <rect>
+        <x>192</x>
+        <y>370</y>
+        <width>58</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>21</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>−</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="zDown">
+      <property name="geometry">
+       <rect>
+        <x>280</x>
+        <y>120</y>
+        <width>53</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>↗</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="gif">
+      <property name="geometry">
+       <rect>
+        <x>256</x>
+        <y>520</y>
+        <width>100</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>GIF</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="animashin">
+      <property name="geometry">
+       <rect>
+        <x>208</x>
+        <y>453</y>
+        <width>93</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>ANIMATION</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="screen">
+      <property name="geometry">
+       <rect>
+        <x>146</x>
+        <y>520</y>
+        <width>100</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>SCREENSHOT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="jpeg">
+      <property name="geometry">
+       <rect>
+        <x>196</x>
+        <y>562</y>
+        <width>84</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 14px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>.jpeg</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="bmp">
+      <property name="geometry">
+       <rect>
+        <x>106</x>
+        <y>562</y>
+        <width>84</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 14px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>.bmp</string>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="y_rot_2">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>300</y>
+        <width>66</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="decimals">
+       <number>0</number>
+      </property>
+      <property name="minimum">
+       <double>-100000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="x_rot_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>300</y>
+        <width>66</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="decimals">
+       <number>0</number>
+      </property>
+      <property name="minimum">
+       <double>-100000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+      </property>
+     </widget>
+     <widget class="QDoubleSpinBox" name="z_rot_2">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>300</y>
+        <width>66</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::ClickFocus</enum>
+      </property>
+      <property name="decimals">
+       <number>0</number>
+      </property>
+      <property name="minimum">
+       <double>-100000.000000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>100000.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="stepType">
+       <enum>QAbstractSpinBox::AdaptiveDecimalStepType</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="bonus">
+     <attribute name="title">
+      <string>ADDITIONAL SETTINGS</string>
+     </attribute>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>203</x>
+        <y>426</y>
+        <width>80</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>VERTIC TYPE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>239</y>
+        <width>83</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>PROJECTION</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>212</x>
+        <y>59</y>
+        <width>74</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>EDGES SIZE</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="pointType">
+      <property name="geometry">
+       <rect>
+        <x>173</x>
+        <y>457</y>
+        <width>141</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+  background: transparent;
+  font-size:13px;
+  padding: 1px 15px 1px 3px;
+  border:1px solid #454545;
+  border-radius:5px 5px 0px 0px;
+} </string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Circle</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Square</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="projection">
+      <property name="geometry">
+       <rect>
+        <x>173</x>
+        <y>270</y>
+        <width>141</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+  background: transparent;
+  font-size:13px;
+  padding: 1px 15px 1px 3px;
+  border:1px solid #454545;
+  border-radius:5px 5px 0px 0px;
+} </string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Parallel</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Central</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pointColor">
+      <property name="geometry">
+       <rect>
+        <x>256</x>
+        <y>540</y>
+        <width>138</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>VERTICES COLOR</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="lineColor">
+      <property name="geometry">
+       <rect>
+        <x>256</x>
+        <y>583</y>
+        <width>138</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>EDGES COLOR</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="pointSize">
+      <property name="geometry">
+       <rect>
+        <x>164</x>
+        <y>163</y>
+        <width>160</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>40</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="backgroundColor">
+      <property name="geometry">
+       <rect>
+        <x>109</x>
+        <y>540</y>
+        <width>138</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>BACKGROUND COLOR</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>201</x>
+        <y>130</y>
+        <width>96</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="text">
+       <string>VERTICES SIZE</string>
+      </property>
+     </widget>
+     <widget class="QSlider" name="lineSize">
+      <property name="geometry">
+       <rect>
+        <x>164</x>
+        <y>90</y>
+        <width>160</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="maximum">
+       <number>40</number>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>206</x>
+        <y>333</y>
+        <width>76</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>13</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>FACET TYPE</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox">
+      <property name="geometry">
+       <rect>
+        <x>173</x>
+        <y>364</y>
+        <width>141</width>
+        <height>32</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QComboBox{
+  background: transparent;
+  font-size:13px;
+  padding: 1px 15px 1px 3px;
+  border:1px solid #454545;
+  border-radius:5px 5px 0px 0px;
+} </string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Solid</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dashed</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="cleanSettings">
+      <property name="geometry">
+       <rect>
+        <x>109</x>
+        <y>583</y>
+        <width>138</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+color: #F5F5F5;
+background-color: #454545;
+border-radius: 15px;
+}
+QPushButton:pressed{ background-color: #686868; }</string>
+      </property>
+      <property name="text">
+       <string>CLEAN SETTINGS</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <action name="file">
+   <property name="text">
+    <string>New File</string>
+   </property>
+  </action>
+  <action name="actionNew_File">
+   <property name="text">
+    <string>New File</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::ApplicationSpecificRole</enum>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>Widget</class>
+   <extends>QWidget</extends>
+   <header>widget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
